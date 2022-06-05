@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
+import { Link } from 'react-router-dom';
 const Displaydetails = () => {
   const [data, setData] = useState([]);
 
@@ -30,7 +31,8 @@ const Displaydetails = () => {
               <p>{d.lastname}</p>
               <p>{d.email}</p>
               <p>{d.address}</p>
-              <button className='dis-btn' onClick={() => setLocalData(d)}> <a href="/updatestudents">update</a> </button>
+              <Link to='/updatestudents'><button className='dis-btn' onClick={() => setLocalData(d)}> update </button></Link>
+
             </div>)
         })}
       </div>
